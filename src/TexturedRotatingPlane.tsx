@@ -10,7 +10,7 @@ const colorMap = useTexture([
   ]);
   return (
     <mesh>
-      <boxBufferGeometry args={[0.4, 0.4, 0.4]} />
+      <boxBufferGeometry args={[0.7, 0.7, 0.7]} />
         <meshBasicMaterial
           key={colorMap[0].id}
           attach={`material-${0}`}

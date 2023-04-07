@@ -67,28 +67,33 @@ const App = () => {
                 </div>
             </nav>
 
-            <Canvas
-                camera={{ fov: 70, near: 0.01, far: 100, position: [0, 0, 1] }}
-            >
-                <Suspense fallback={null}>
-                    <TexturedRotatingPlane />
-                    <OrbitControls autoRotate autoRotateSpeed={5} />
-                </Suspense>
-            </Canvas>
+            <div className="flex justify-around">
+                <div
+                    className="hidden md:block absolute top-1/3 text-6xl left-5 font-bold"
+                >
+                    <span className="text-gray-600">Freelance</span>
+                </div>
 
-            <div
-                className="hidden md:block absolute top-1/3 text-6xl left-5 font-bold"
-            >
-                <span className="text-gray-600">Freelance</span>
+                <div className="border-black absolute top-1/3 text-6xl font-bold h-2/5">
+                    <Canvas
+                        camera={{ fov: 70, near: 0.01, far: 100, position: [0, 0, 1] }}
+                        style={{height: '100%', width: '100%'}}
+                    >
+                        <Suspense fallback={null}>
+                            <TexturedRotatingPlane />
+                            <OrbitControls autoRotate autoRotateSpeed={5} />
+                        </Suspense>
+                    </Canvas>
+                </div>
             </div>
+
+
 
             <div
                 className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3"
             >
                 <h1 className="text-4xl font-bold text-indigo-900">Hi, I'm Julia</h1>
-                <p className="text-gray-400">
-                    With over 3 years of experience on web design and development. 
-                </p>
+                <p className="text-gray-400">{translations[lang].presentation}</p>
                 <a
                     className="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit"
                     href="#contact"
@@ -101,7 +106,7 @@ const App = () => {
             <div className="container mx-auto">
 
                 <div className="flex flex-col gap-3 items-center">
-                    <h1 className="text-indigo-600 font-bold">SERVICES</h1>
+                    <h1 className="text-indigo-600 font-bold">{translations[lang].services}</h1>
                     <h1 className="text-3xl dark:text-white">{translations[lang].whatDoIOffer}</h1>
                     <p className="w-1/2 text-center text-gray-400">{translations[lang].whatDoIOfferContent}</p>
                 </div>
@@ -113,10 +118,7 @@ const App = () => {
                     >
                         <img className="w-10" src="./img/icon.png" alt="" />
                         <h1 className="font-medium text-lg dark:text-white">UX / UI Design</h1>
-                        <p className="text-gray-400">
-                            I specialize in creating interactive websites for individuals and
-                            small businesses.
-                        </p>
+                        <p className="text-gray-400">{translations[lang].portfolioDescription1}</p>
                         <a className="text-indigo-600 font-semibold text-sm" href=""
                         >Read More</a
                         >
