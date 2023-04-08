@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import {useTexture} from '@react-three/drei'
 
 const TexturedRotatingPlane: React.FC = () => {

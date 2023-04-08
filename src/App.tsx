@@ -20,7 +20,7 @@ const App = () => {
                     <div>
                     </div>
                     <ul
-                        className="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase"
+                        className="hidden absolute md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase"
                     >
                         <li className="hover:text-gray-500">
                             <a href="#">{translations[lang].homepage}</a>
@@ -35,9 +35,18 @@ const App = () => {
                             <a href="#contact">{translations[lang].contact}</a>
                         </li>
                     </ul>
+                    <div/>
+                    <div className="flex justify-between w-1/5">
+                        <img src="https://flagcdn.com/gb.svg" width="30" onClick={() => setLang('en')}/>
+                        <img src="https://flagcdn.com/es.svg" width="30" onClick={() => setLang('es')}/>
+                        <img src="https://flagcdn.com/br.svg" width="30" onClick={() => setLang('es')}/>
+                        <img src="https://flagcdn.com/fr.svg" width="30" onClick={() => setLang('fr')}/>
+                        <img src="https://flagcdn.com/it.svg" width="30" onClick={() => setLang('it')}/>
+                        <img src="https://flagcdn.com/de.svg" width="30" onClick={() => setLang('de')}/>
+                    </div>
                     <img
                         id="moon"
-                        src="./img/moon.png"
+                        src="/img/moon.png"
                         className="hidden md:block w-5 cursor-pointer"
                         alt=""
                         onClick={() => setDarkMode(!darkMode)}
@@ -87,8 +96,6 @@ const App = () => {
                 </div>
             </div>
 
-
-
             <div
                 className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3"
             >
@@ -116,7 +123,7 @@ const App = () => {
                     <div
                         className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
                     >
-                        <img className="w-10" src="./img/icon.png" alt="" />
+                        <img className="w-10" src="/img/icon.png" alt="" />
                         <h1 className="font-medium text-lg dark:text-white">UX / UI Design</h1>
                         <p className="text-gray-400">{translations[lang].portfolioDescription1}</p>
                         <a className="text-indigo-600 font-semibold text-sm" href=""
@@ -127,7 +134,7 @@ const App = () => {
                     <div
                         className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
                     >
-                        <img className="w-10" src="./img/icon.png" alt="" />
+                        <img className="w-10" src="/img/icon.png" alt="" />
                         <h1 className="font-medium text-lg dark:text-white">UX / UI Design</h1>
                         <p className="text-gray-400">
                             I specialize in creating interactive websites for individuals and
@@ -147,11 +154,7 @@ const App = () => {
                 <div className="flex flex-col gap-3 items-center">
                     <h1 className="text-indigo-600 font-bold">PORTFOLIO</h1>
                     <h1 className="text-3xl dark:text-white">Works & Projects</h1>
-                    <p className="w-1/2 text-center text-gray-400">
-                        I help designers, small agencies and businesses bring their ideas to
-                        life. Powered by Figma, VS Code and coffee, I turn your requirements
-                        into a well-designed websites
-                    </p>
+                    <p className="w-1/2 text-center text-gray-400"></p>
                 </div>
 
                 <div className="p-5 sm:p-0 flex flex-wrap justify-between">
@@ -159,49 +162,49 @@ const App = () => {
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
 
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
 
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
 
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
 
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
 
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
 
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
 
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
-                        <img src="./img/item.png" />
+                        <img src="/img/item.png" />
                     </div>
                 </div>
             </div>
@@ -212,12 +215,9 @@ const App = () => {
             <div className="container mx-auto">
 
                 <div className="flex flex-col gap-3 items-center">
-                    <h1 className="text-indigo-600 font-bold">CONTACT</h1>
-                    <h1 className="text-3xl dark:text-white">Have a Question?</h1>
-                    <p className="w-1/2 text-center text-gray-400">
-                        Do you have an idea? Let's discuss it and see what we can do
-                        together.
-                    </p>
+                    <h1 className="text-indigo-600 font-bold">{translations[lang].contact}</h1>
+                    <h1 className="text-3xl dark:text-white">{translations[lang].haveAQuestion}</h1>
+                    <p className="w-1/2 text-center text-gray-400">{translations[lang].letsDiscussIt}</p>
                 </div>
 
                 <form className="mt-5 p-8 flex flex-col gap-5 items-center">
@@ -248,14 +248,12 @@ const App = () => {
 
         <div className="w-full bg-gray-800">
             <div className="container mx-auto py-5 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                    <img className="w-8" src="./img/logo.png" alt="" />
-                </div>
+                <div></div>
                 <div className="flex gap-2">
-                    <img className="w-4 cursor-pointer" src="./img/facebook.png" alt="" />
-                    <img className="w-4 cursor-pointer" src="./img/instagram.png" alt="" />
-                    <img className="w-4 cursor-pointer" src="./img/twitter.png" alt="" />
-                    <img className="w-4 cursor-pointer" src="./img/linkedin.png" alt="" />
+                    <img src="/img/facebook.png" alt="" />
+                    <img src="/img/instagram.png" alt="" />
+                    <img src="/img/twitter.png" alt="" />
+                    <img src="/img/linkedin.png" alt="" />
                 </div>
             </div>
         </div>

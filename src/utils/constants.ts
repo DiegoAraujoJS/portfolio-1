@@ -7,7 +7,10 @@ const textContents = {
     whatDoIOffer: 'What do I offer?',
     whatDoIOfferContent:'My approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.' ,
     presentation: 'With over 3 years of experience on web design and development.',
+    portfolioPresentation: 'I help designers, small agencies and businesses bring their ideas to life. Powered by Figma, VS Code and coffee, I turn your requirements into a well-designed websites',
     portfolioDescription1: 'I specialize in creating interactive websites for individuals and small businesses.',
+    haveAQuestion: 'Have a Question?',
+    letsDiscussIt: 'Do you have an idea? Let\'s discuss it and see what we can do together.',
 }
 
 export const translations = {
@@ -21,7 +24,10 @@ export const translations = {
             whatDoIOffer: '¿Qué ofrezco?',
             whatDoIOfferContent: 'Mi enfoque en el diseño de sitios web es crear un sitio web que fortalezca la marca de su empresa mientras garantiza la facilidad de uso y la simplicidad para su audiencia.',
             presentation: 'Con más de 3 años de experiencia en diseño y desarrollo web.',
-            portfolioDescription1: 'Me especializo en crear sitios web interactivos para individuos y pequeñas empresas.'
+            portfolioDescription1: 'Me especializo en crear sitios web interactivos para individuos y pequeñas empresas.',
+            portfolioPresentation: 'Ayudo a diseñadores, pequeñas agencias y empresas a llevar sus ideas a la vida. Alimentado por Figma, VS Code y café, convierto sus requisitos en sitios web bien diseñados',
+            haveAQuestion: '¿Tienes una pregunta?',
+            letsDiscussIt: '¿Tienes una idea? Hablamos y veamos qué podemos hacer juntos.'
         },
         fr: {
             homepage: 'Page d\'accueil',
@@ -32,7 +38,10 @@ export const translations = {
             whatDoIOffer: 'Ce que je propose',
             whatDoIOfferContent: 'Mon approche de la conception de sites Web consiste à créer un site Web qui renforce la marque de votre entreprise tout en garantissant la facilité d\'utilisation et la simplicité pour votre public.',
             presentation: 'Avec plus de 3 ans d\'expérience en conception et développement Web.',
-            portfolioDescription1: 'Je me spécialise dans la création de sites Web interactifs pour les particuliers et les petites entreprises.'
+            portfolioDescription1: 'Je me spécialise dans la création de sites Web interactifs pour les particuliers et les petites entreprises.',
+            portfolioPresentation: 'Je aide les designers, les petites agences et les entreprises à concrétiser leurs idées. Alimenté par Figma, VS Code et café, je transforme vos exigences en sites Web bien conçus',
+            haveAQuestion: 'Avez-vous une question?',
+            letsDiscussIt: 'Avez-vous une idée? Parlons-en et voyons ce que nous pouvons faire ensemble.'
         },
         de: {
             homepage: 'Startseite',
@@ -43,7 +52,10 @@ export const translations = {
             whatDoIOffer: 'Was biete ich an?',
             whatDoIOfferContent: 'Meine Herangehensweise an die Webseitengestaltung besteht darin, eine Website zu erstellen, die die Marke Ihres Unternehmens stärkt, während die Benutzerfreundlichkeit und Einfachheit für Ihr Publikum gewährleistet wird.',
             presentation: 'Mit mehr als 3 Jahren Erfahrung im Webdesign und -entwicklung.',
-            portfolioDescription1: 'Ich spezialisiere mich auf die Erstellung interaktiver Websites für Einzelpersonen und kleine Unternehmen.'
+            portfolioDescription1: 'Ich spezialisiere mich auf die Erstellung interaktiver Websites für Einzelpersonen und kleine Unternehmen.',
+            portfolioPresentation: 'Ich helfe Designern, kleinen Agenturen und Unternehmen dabei, ihre Ideen in die Tat umzusetzen. Mit Figma, VS Code und Kaffee angetrieben, verwandle ich Ihre Anforderungen in gut gestaltete Websites',
+            haveAQuestion: 'Hast du eine Frage?',
+            letsDiscussIt: 'Hast du eine Idee? Lass uns darüber sprechen und sehen, was wir zusammen tun können.'
         },
         it: {
             homepage: 'Homepage',
@@ -54,6 +66,9 @@ export const translations = {
             whatDoIOffer: 'Cosa offro?',
             whatDoIOfferContent: 'Il mio approccio alla progettazione di siti Web consiste nel creare un sito Web che rafforzi la marca della tua azienda garantendo facilità d\'uso e semplicità per il tuo pubblico.',
             presentation: 'Con più di 3 anni di esperienza in progettazione e sviluppo Web.',
-            portfolioDescription1: 'Mi specializzo nella creazione di siti Web interattivi per privati e piccole imprese.'
+            portfolioDescription1: 'Mi specializzo nella creazione di siti Web interattivi per privati e piccole imprese.',
+            portfolioPresentation: 'Aiuto designer, piccole agenzie e aziende a realizzare le loro idee. Alimentato da Figma, VS Code e caffè, trasformo i tuoi requisiti in siti Web ben progettati',
+            haveAQuestion: 'Hai una domanda?',
+            letsDiscussIt: 'Hai un\'idea? Parliamone e vediamo cosa possiamo fare insieme.'
         },
     } satisfies {[key: string]: typeof textContents}
