@@ -39,7 +39,7 @@ const App = () => {
                     <div className="flex justify-between w-1/5">
                         <img src="https://flagcdn.com/gb.svg" width="30" onClick={() => setLang('en')}/>
                         <img src="https://flagcdn.com/es.svg" width="30" onClick={() => setLang('es')}/>
-                        <img src="https://flagcdn.com/br.svg" width="30" onClick={() => setLang('es')}/>
+                        <img src="https://flagcdn.com/br.svg" width="30" onClick={() => setLang('br')}/>
                         <img src="https://flagcdn.com/fr.svg" width="30" onClick={() => setLang('fr')}/>
                         <img src="https://flagcdn.com/it.svg" width="30" onClick={() => setLang('it')}/>
                         <img src="https://flagcdn.com/de.svg" width="30" onClick={() => setLang('de')}/>
@@ -99,7 +99,7 @@ const App = () => {
             <div
                 className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3"
             >
-                <h1 className="text-4xl font-bold text-indigo-900">Hi, I'm Julia</h1>
+                <h1 className="text-4xl font-bold text-indigo-900">{translations[lang].hi}</h1>
                 <p className="text-gray-400">{translations[lang].presentation}</p>
                 <a
                     className="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit"
@@ -135,11 +135,8 @@ const App = () => {
                         className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
                     >
                         <img className="w-10" src="/img/icon.png" alt="" />
-                        <h1 className="font-medium text-lg dark:text-white">UX / UI Design</h1>
-                        <p className="text-gray-400">
-                            I specialize in creating interactive websites for individuals and
-                            small businesses.
-                        </p>
+                        <h1 className="font-medium text-lg dark:text-white">Product & Idea Shaping</h1>
+                        <p className="text-gray-400">{translations[lang].portfolioDescription2}</p>
                         <a className="text-indigo-600 font-semibold text-sm" href=""
                         >Read More</a
                         >

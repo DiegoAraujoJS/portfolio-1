@@ -2,10 +2,10 @@ import {useTexture} from '@react-three/drei'
 
 const TexturedRotatingPlane: React.FC = () => {
 const colorMap = useTexture([
-    'src/assets/three.jpg',
-    'src/assets/two.jpg',
-    'src/assets/one.jpeg',
-    'src/assets/four.jpg',
+    'assets/three.jpg',
+    'assets/two.jpg',
+    'assets/one.jpeg',
+    'assets/four.jpg',
   ]);
   return (
     <mesh>
