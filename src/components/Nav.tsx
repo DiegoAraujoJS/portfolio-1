@@ -26,7 +26,7 @@ const Nav = ({lang, setLang, darkMode, setDarkMode}: {
                 </li>
             </ul>
             <div/>
-            <div className="flex justify-between w-1/5">
+            <div className="flex justify-between w-1/5 mr-9">
                 <img src="https://flagcdn.com/gb.svg" width="30" onClick={() => setLang('en')}/>
                 <img src="https://flagcdn.com/es.svg" width="30" onClick={() => setLang('es')}/>
                 <img src="https://flagcdn.com/br.svg" width="30" onClick={() => setLang('br')}/>
