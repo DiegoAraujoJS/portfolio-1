@@ -1,112 +1,54 @@
 import { OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import { Suspense, useState } from "react"
+import Nav from "./components/Nav"
 import TexturedRotatingPlane from "./TexturedRotatingPlane"
 import { translations } from "./utils/constants"
 
-const App = () => {
-
+const App: React.FC = () => {
     const [lang, setLang] = useState<keyof typeof translations>('en')
 
     const [darkMode, setDarkMode] = useState(false)
 
     return <div className={`font-nunito ${darkMode ? "dark" : ""}`}>
+        <Nav lang={lang} setLang={setLang} darkMode={darkMode} setDarkMode={setDarkMode}/>
         <div
-            className="h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden"
+            className="h-1/2 flex justify-around items-center lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden"
         >
 
-            <nav className="w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
-                <div className="container mx-auto py-5 flex items-center justify-between">
-                    <div>
-                    </div>
-                    <ul
-                        className="hidden absolute md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase"
-                    >
-                        <li className="hover:text-gray-500">
-                            <a href="#">{translations[lang].homepage}</a>
-                        </li>
-                        <li className="hover:text-gray-500">
-                            <a href="#services">{translations[lang].services}</a>
-                        </li>
-                        <li className="hover:text-gray-500">
-                            <a href="#works">{translations[lang].works}</a>
-                        </li>
-                        <li className="hover:text-gray-500">
-                            <a href="#contact">{translations[lang].contact}</a>
-                        </li>
-                    </ul>
-                    <div/>
-                    <div className="flex justify-between w-1/5">
-                        <img src="https://flagcdn.com/gb.svg" width="30" onClick={() => setLang('en')}/>
-                        <img src="https://flagcdn.com/es.svg" width="30" onClick={() => setLang('es')}/>
-                        <img src="https://flagcdn.com/br.svg" width="30" onClick={() => setLang('br')}/>
-                        <img src="https://flagcdn.com/fr.svg" width="30" onClick={() => setLang('fr')}/>
-                        <img src="https://flagcdn.com/it.svg" width="30" onClick={() => setLang('it')}/>
-                        <img src="https://flagcdn.com/de.svg" width="30" onClick={() => setLang('de')}/>
-                    </div>
-                    <img
-                        id="moon"
-                        src="/img/moon.png"
-                        className="hidden md:block w-5 cursor-pointer"
-                        alt=""
-                        onClick={() => setDarkMode(!darkMode)}
-                    />
-                    <div id="hamburger" className="space-y-1 md:hidden cursor-pointer z-20">
-                        <div className="w-6 h-0.5 bg-black"></div>
-                        <div className="w-6 h-0.5 bg-black"></div>
-                        <div className="w-6 h-0.5 bg-black"></div>
-                    </div>
-                    <ul
-                        id="menu"
-                        className="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center"
-                    >
-                        <li>
-                            <a id="hLink" href="#">{translations[lang].homepage}</a>
-                        </li>
-                        <li>
-                            <a id="hLink" href="#services">{translations[lang].services}</a>
-                        </li>
-                        <li>
-                            <a id="hLink" href="#works">{translations[lang].works}</a>
-                        </li>
-                        <li>
-                            <a id="hLink" href="#contact">{translations[lang].contact}</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div className="flex justify-around">
+            <div style={{ maxHeight: '100px', maxWidth: '100px', height: '100px', width: '100px', marginRight: '20px'}}>
                 <div
-                    className="hidden md:block absolute top-1/3 text-6xl left-5 font-bold"
-                >
-                    <span className="text-gray-600">Freelance</span>
-                </div>
+                    className="hidden md:block top-1/3 text-6xl left-5 font-bold text-gray-500"
+                >Freelance</div>
+            </div>
 
-                <div className="border-black absolute top-1/3 text-6xl font-bold h-2/5">
-                    <Canvas
-                        camera={{ fov: 70, near: 0.01, far: 100, position: [0, 0, 1] }}
-                        style={{height: '100%', width: '100%'}}
+            <div style={{ maxHeight: '250px', maxWidth: '250px', height: '250px', width: '250px'}}>
+                <Canvas
+                    camera={{ fov: 70, near: 0.01, far: 100, position: [0, 0, 1] }}
+                >
+                    <Suspense fallback={null}>
+                        <TexturedRotatingPlane />
+                        <OrbitControls autoRotate autoRotateSpeed={4} />
+                    </Suspense>
+                </Canvas>
+            </div>
+
+            <div style={{ maxHeight: '100px', maxWidth: '100px', height: '100px', width: '100px'}}>
+                <div
+                    className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3"
+                >
+                    <h1 className="text-4xl font-bold text-indigo-900">{translations[lang].hi}</h1>
+                    <p className="text-gray-400">{translations[lang].presentation}</p>
+                    <a
+                        className="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit"
+                        href="#contact"
+                    >Hire Me</a
                     >
-                        <Suspense fallback={null}>
-                            <TexturedRotatingPlane />
-                            <OrbitControls autoRotate autoRotateSpeed={5} />
-                        </Suspense>
-                    </Canvas>
                 </div>
             </div>
+            
 
-            <div
-                className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3"
-            >
-                <h1 className="text-4xl font-bold text-indigo-900">{translations[lang].hi}</h1>
-                <p className="text-gray-400">{translations[lang].presentation}</p>
-                <a
-                    className="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit"
-                    href="#contact"
-                >Hire Me</a
-                >
-            </div>
+
         </div>
 
         <div id="services" className="dark:bg-slate-900">
@@ -167,31 +109,6 @@ const App = () => {
                     >
                         <img src="/img/item.png" />
                     </div>
-
-                    <div
-                        className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
-                    >
-                        <img src="/img/item.png" />
-                    </div>
-
-                    <div
-                        className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
-                    >
-                        <img src="/img/item.png" />
-                    </div>
-
-                    <div
-                        className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
-                    >
-                        <img src="/img/item.png" />
-                    </div>
-
-                    <div
-                        className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
-                    >
-                        <img src="/img/item.png" />
-                    </div>
-
                     <div
                         className="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
                     >
