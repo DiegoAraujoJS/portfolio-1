@@ -162,7 +162,6 @@ const App: React.FC = () => {
 
         <div className="w-full bg-gray-800">
             <div className="container mx-auto py-5 flex items-center justify-between">
-                <div></div>
                 <div className="flex gap-2">
                     <img src="/img/facebook.png" alt="" />
                     <img src="/img/instagram.png" alt="" />
