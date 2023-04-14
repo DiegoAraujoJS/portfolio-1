@@ -1,4 +1,4 @@
-import {useTexture} from '@react-three/drei'
+import { useTexture } from '@react-three/drei'
 
 const TexturedRotatingPlane: React.FC = () => {
 const colorMap = useTexture([
